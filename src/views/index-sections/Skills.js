@@ -17,121 +17,147 @@
 
 */
 import React from "react";
-// plugin that creates slider
-import Slider from "nouislider";
 
 // reactstrap components
 import {
   Button,
-  Label,
-  FormGroup,
+  NavItem,
+  NavLink,
+  Nav,
+  Pagination,
+  PaginationItem,
+  PaginationLink,
+  Progress,
+  TabContent,
+  TabPane,
   Container,
   Row,
   Col,
+  UncontrolledTooltip,
+  PopoverBody,
+  PopoverHeader,
+  UncontrolledPopover,
 } from "reactstrap";
 
+// core components
+
 function Skills() {
-  React.useEffect(() => {
-    if (
-      !document
-        .getElementById("sliderRegular")
-        .classList.contains("noUi-target")
-    ) {
-      Slider.create(document.getElementById("sliderRegular"), {
-        start: [37.5],
-        connect: [true, false],
-        step: 0.5,
-        range: { min: 0, max: 100 },
-      });
+  const [activeTab, setActiveTab] = React.useState("1");
+  const toggle = (tab) => {
+    if (activeTab !== tab) {
+      setActiveTab(tab);
     }
-    if (
-      !document.getElementById("sliderDouble").classList.contains("noUi-target")
-    ) {
-      Slider.create(document.getElementById("sliderDouble"), {
-        start: [20, 80],
-        connect: [false, true, false],
-        step: 1,
-        range: { min: 0, max: 100 },
-      });
-    }
-  });
+  };
   return (
     <>
-      <div className="section section-buttons" id="skills">
-        <Container>
-          <div className="title">
-            <h2>SKILLS</h2>
-          </div>
-          <div id="profile">
+      <div className="section" id="skills">
+        <Container className="skills">
+        <div className="title">
+          <h2>SKILLS</h2>
+        </div>
+          <Row>
+            <Col md="6">
+              <div className="title">
+                <h3>BACKEND</h3>
+              </div>
+              <div id="node-info">
+                <h6>Node.js (Express)</h6>
+                <Progress
+                  max="100"
+                  value="70"
+                  barClassName="progress-bar-info"
+                />
+                <UncontrolledPopover
+                  placement="top"
+                  target="node-info"
+                  trigger="hover"
+                >
+                  <PopoverBody>
+                  Node.js(Express)를 사용해 프로젝트를 진행해 본 경험이 있습니다.
+                  </PopoverBody>
+                </UncontrolledPopover>       
+              </div>
+              <br />
+              <div id="python-info">
+                <h6>Python</h6>
+                <Progress
+                  max="100"
+                  value="70"
+                  barClassName="progress-bar-info"
+                />
+                <UncontrolledPopover
+                  placement="top"
+                  target="python-info"
+                  trigger="hover"
+                >
+                  <PopoverBody>
+                    파이썬 기반의 AI 모델을 사용해 시스템을 구현해 본 경험이 있습니다.
+                  </PopoverBody>
+                </UncontrolledPopover>
+              </div>
+              
+              <br />
+            </Col>
+            <Col md="6">
             <div className="title">
-              <h3>문제에서 기회를 포착하고,
-                  해결을 통한 성취감을 좋아합니다.<br/>
-                  일상에서 마주한 불편함으로,
-                  더 나은 사용자 경험에 대해 고민합니다.
-              </h3>
-            </div>
-            <Row>
-              <Col md="8">
-                <Button
-                  className="mr-1"
-                  color="link"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
+                <h3>FRONTEND</h3>
+              </div>
+              <div id="javascript-info">
+                <h6>JavaScript</h6>
+                <Progress
+                  max="100"
+                  value="60"
+                  barClassName="progress-bar-success"
+                />
+                <UncontrolledPopover
+                  placement="top"
+                  target="javascript-info"
+                  trigger="hover"
                 >
-                  Default
-                </Button>
-                <Button
-                  className="btn-link mr-1"
-                  color="primary"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Primary
-                </Button>
-                <Button
-                  className="btn-link mr-1"
-                  color="success"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Success
-                </Button>
-                <Button
-                  className="btn-link mr-1"
-                  color="info"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Info
-                </Button>
-                <Button
-                  className="btn-link mr-1"
-                  color="warning"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Warning
-                </Button>
-                <Button
-                  className="btn-link mr-1"
-                  color="danger"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Danger
-                </Button>
-                <Button
-                  className="btn-link"
-                  color="neutral"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  Neutral
-                </Button>
-              </Col>
-            </Row>
-          </div>
-          
+                  <PopoverBody>
+                    
+                  </PopoverBody>
+                </UncontrolledPopover>
+              </div>
+              
+              <br />
+              <h6>React</h6>
+              <Progress
+                max="100"
+                value="30"
+                barClassName="progress-bar-success"
+              />
+            </Col>
+          </Row>
+          <br />
+          <br />
+          <Row>
+            <Col md="6">
+            <div className="title">
+                <h3>TOOLS</h3>
+              </div>
+              <h6>Git</h6>
+              <Progress
+                max="100"
+                value="70"
+                barClassName="progress-bar-warning"
+              />
+              <br />
+              <h6>Postman</h6>
+              <Progress
+                max="100"
+                value="40"
+                barClassName="progress-bar-warning"
+              />
+              <br />
+              <h6>MongoDB</h6>
+              <Progress
+                max="100"
+                value="70"
+                barClassName="progress-bar-warning"
+              />
+            </Col>
+          </Row>
         </Container>
       </div>
     </>

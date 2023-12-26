@@ -19,7 +19,7 @@
 import React from "react";
 // plugin that creates slider
 import Slider from "nouislider";
-import { FaUser, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaUser, FaPhone, FaEnvelope, FaBirthdayCake } from "react-icons/fa";
 // reactstrap components
 import {
   Button,
@@ -51,7 +51,7 @@ function AboutMe() {
         start: [20, 80],
         connect: [false, true, false],
         step: 1,
-        range: { min: 0, max: 100 },
+        range: { min: 0, max: 100 }, 
       });
     }
   });
@@ -84,18 +84,19 @@ function AboutMe() {
                 />
               </Col>
               <Col md="9">
-                <div className="profile-info">
-                  
+                <div className="profile-info" style={{ marginLeft: '50px' }}>
                   {/* 프로필 정보 */}
                   <h4>
-                  <FaUser /> NAME  |  김보경
-                  </h4>
-
-                  <h4>
-                  <FaPhone /> 전화번호 | 010-9068-8430
+                  <FaUser style={{ marginRight: '10px' }}/> NAME &nbsp; | &nbsp; 김보경
                   </h4>
                   <h4>
-                  <FaEnvelope /> 이메일 | bkykim12@gmail.com
+                  <FaBirthdayCake style={{ marginRight: '10px' }}/> 생년월일 &nbsp; | &nbsp; 2000.03.09
+                  </h4>
+                  <h4>
+                  <FaPhone style={{ marginRight: '10px' }}/> 전화번호 &nbsp; | &nbsp; 010-9068-8430
+                  </h4>
+                  <h4>
+                  <FaEnvelope style={{ marginRight: '10px' }}/> 이메일 &nbsp; | &nbsp; bkykim12@gmail.com
                   </h4>
                 </div>
               </Col>

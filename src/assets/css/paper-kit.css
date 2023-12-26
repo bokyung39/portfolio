@@ -6312,6 +6312,10 @@ License - nucleoapp.com/license/
   position: relative;
 }
 
+.profile-info h4 {
+  margin-left: 20px;
+}
+
 .owner {
   text-align: center;
 }
@@ -8661,4 +8665,8 @@ td.rdtYear:hover {
   border-bottom-color: #fff;
 }
 
+.section h6 {
+  font-weight: 1000;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=paper-kit.css.map */
