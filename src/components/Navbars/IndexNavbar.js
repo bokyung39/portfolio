@@ -19,6 +19,7 @@
 import React, { useEffect, useState } from "react";
 // nodejs library that concatenates strings
 import classnames from "classnames";
+import { FaBook } from "react-icons/fa";
 // reactstrap components
 import {
   Button,
@@ -116,27 +117,36 @@ const [scrollOffset, setScrollOffset] = useState(0);
               skills
               </NavLink>
             </NavItem>
+            <NavItem>
+            <NavLink
+              data-placement="bottom"
+              href="#"
+              onClick={() => scrollToSection("projects")}
+              title="projects"
+            >
+              projects
+              </NavLink>
+            </NavItem>
             
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                href="https://github.com/bokyung39"
                 target="_blank"
-                title="Follow us on Instagram"
+                title="Go to GitHub"
               >
-                <i className="fa fa-instagram" />
-                <p className="d-lg-none">Instagram</p>
+                <i className="fa fa-github" />
+                <p className="d-lg-none">GitHub</p>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="https://www.github.com/CreativeTimOfficial/paper-kit-react?ref=creativetim"
+                href="https://bokyung39.github.io"
                 target="_blank"
-                title="Star on GitHub"
+                title="Go to Blog"
               >
-                <i className="fa fa-github" />
-                <p className="d-lg-none">GitHub</p>
+                Blog
               </NavLink>
             </NavItem>
             <NavItem>

@@ -41,6 +41,7 @@ import SectionLogin from "views/index-sections/SectionLogin.js";
 import SectionExamples from "views/index-sections/SectionExamples.js";
 import SectionDownload from "views/index-sections/SectionDownload.js";
 import Skills from "./index-sections/Skills";
+import Projects from "./index-sections/Projects";
 
 function Index() {
   document.documentElement.classList.remove("nav-open");
@@ -57,6 +58,7 @@ function Index() {
       <div className="main">
         <AboutMe />
         <Skills />
+        <Projects />
         <SectionButtons />
         <SectionNavbars />
         <SectionNavigation />

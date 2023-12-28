@@ -114,12 +114,10 @@ function Skills() {
                   target="javascript-info"
                   trigger="hover"
                 >
-                  <PopoverBody>
-                    
+                  <PopoverBody>  
                   </PopoverBody>
                 </UncontrolledPopover>
               </div>
-              
               <br />
               <h6>React</h6>
               <Progress
@@ -136,7 +134,7 @@ function Skills() {
             <div className="title">
                 <h3>TOOLS</h3>
               </div>
-              <h6>Git</h6>
+              <h6>Github</h6>
               <Progress
                 max="100"
                 value="70"
@@ -150,12 +148,24 @@ function Skills() {
                 barClassName="progress-bar-warning"
               />
               <br />
-              <h6>MongoDB</h6>
-              <Progress
-                max="100"
-                value="70"
-                barClassName="progress-bar-warning"
-              />
+              <div id="mongoDB-info">
+                <h6>MongoDB</h6>
+                <Progress
+                  max="100"
+                  value="70"
+                  barClassName="progress-bar-warning"
+                />
+                <UncontrolledPopover
+                    placement="top"
+                    target="mongoDB-info"
+                    trigger="hover"
+                  >
+                  <PopoverBody>
+                    MongoDB를 사용해 데이터베이스를 관리해 본 경험이 있습니다.  
+                  </PopoverBody>
+                </UncontrolledPopover>
+              </div>
+              
             </Col>
           </Row>
         </Container>
