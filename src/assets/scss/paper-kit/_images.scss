@@ -16,6 +16,9 @@
     margin-top: -21px;
     width: 40px;
 }
+.img-hover:hover {
+    filter: blur(2px);
+  }
 .img-circle{
     background-color: $white-color;
     margin-bottom: 10px;
