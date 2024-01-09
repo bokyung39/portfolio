@@ -82,31 +82,45 @@ function Projects() {
           <h2>PROJECTS</h2>
         </div>
           <Row className="example-page">
-            <Col className="text-center" md="4">
-              <a href="examples/landing.html" target="_blank" className="img-hover">
+            <Col className="text-center" md="6">
+              
                 <img
                   alt="..."
-                  className="img-rounded img-responsive"
+                  className="img-rounded img-responsive img-hover"
                   src={require("assets/img/WhiteRabbit.png")}
                   style={{ width: "100%" }}
                 />
-              </a>
+                <h4 className="hover-text">
+                  프로젝트 설명
+                </h4>
+              
+              
               <div className="text-left">
-                <label className="label label-warning ml-1 mr-1 mb-4">express</label>
-                <label className="label label-warning mr-1 mb-4">Node.js</label>
-                <label className="label label-warning mr-1 mb-4">Moongoose</label>
+                <Button
+                  className="btn-outline-neutral btn-round ml-1 mr-1 mb-4"
+                  color="default"
+                  size="sm"
+                >
+                  express 
+                </Button>
+                <Button
+                  className="btn-outline-neutral btn-round ml-1 mr-1 mb-4"
+                  color="default"
+                  size="sm"
+                >
+                  Node.js 
+                </Button>
+                <Button
+                  className="btn-outline-neutral btn-round ml-1 mr-1 mb-4"
+                  color="default"
+                  size="sm"
+                >
+                  Moongoose 
+                </Button>
               </div>
-              <Button
-                className="btn-outline-neutral btn-round"
-                color="default"
-                href="/landing-page"
-                target="_blank"
-                style={{ hover: "opacity 0" }}
-              >
-                View 
-              </Button>
+              
             </Col>
-            <Col className="text-center" md="4">
+            <Col className="text-center" md="6">
               <a href="examples/landing.html" target="_blank">
                 <img
                   alt="..."
@@ -124,7 +138,7 @@ function Projects() {
                 Landing 
               </Button>
             </Col>
-            <Col className="text-center" md="4">
+            <Col className="text-center" md="6">
               <a href="examples/profile.html" target="_blank">
                 <img
                   alt="..."

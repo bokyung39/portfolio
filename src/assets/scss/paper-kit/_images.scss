@@ -17,8 +17,21 @@
     width: 40px;
 }
 .img-hover:hover {
-    filter: blur(2px);
-  }
+    filter: blur(3px) brightness(0.5);
+}
+.hover-text {
+    background-color: white;
+    position: absolute;
+    display: block;
+    color: #000;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.img-hover:hover + .hover-text {
+    display: block;
+}
 .img-circle{
     background-color: $white-color;
     margin-bottom: 10px;
