@@ -53,6 +53,7 @@ const items = [
 
 function Projects() {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [selectedProjectIndex, setSelectedProjectIndex] = React.useState(0);
   const [animating, setAnimating] = React.useState(false);
   const onExiting = () => {
     setAnimating(true);
@@ -79,6 +80,10 @@ function Projects() {
     if (section) {
       section.scrollIntoView({ behavior: "smooth"});
     }
+  };
+  const handleDetailClick = (index) => {
+    setSelectedProjectIndex(index);
+    scrollToSection("detail");
   };
   return (
     <>
@@ -110,7 +115,7 @@ function Projects() {
                       className="btn-outline-neutral btn-round mt-2"
                       color="default"
                       size="sm"
-                      onClick={() => scrollToSection("detail")}
+                      onClick={() => handleDetailClick(index)}
                     >
                       자세히 보기
                     </Button>
@@ -135,71 +140,131 @@ function Projects() {
         </Container>
       </div>
       <div id="detail">
-        <div className="section pt-o" id="carousel projects">
-          <Container className="projects">
-          <div className="title">
-            <h2>detail</h2>
-          </div>
-            <Row>
-              <Col className="ml-auto mr-auto" md="8">
-                <Card className="page-carousel">
-                  <Carousel
-                    activeIndex={activeIndex}
-                    next={next}
-                    previous={previous}
-                  >
-                    <CarouselIndicators
-                      items={items}
+        {selectedProjectIndex === null && setSelectedProjectIndex(0)}
+        {selectedProjectIndex !== null && (
+          <div className="section pt-o">
+            <Container className="projects">
+              
+              <Row>
+                <Col className="ml-auto mr-auto" md="5">
+                  <Card className="page-carousel">
+                    {/* 수정: 선택된 프로젝트의 이미지를 Carousel로 표시 */}
+                    <Carousel
                       activeIndex={activeIndex}
-                      onClickHandler={goToIndex}
-                    />
-                    {items.map((item) => {
-                      return (
+                      next={next}
+                      previous={previous}
+                    >
+                      {/* 수정: 선택된 프로젝트의 이미지 목록을 반복해서 CarouselItem으로 생성 */}
+                      {portfolioData.portfolioList[
+                        selectedProjectIndex
+                      ].images.map((image, imageIndex) => (
                         <CarouselItem
                           onExiting={onExiting}
                           onExited={onExited}
-                          key={item.src}
+                          key={imageIndex}
                         >
-                          <img src={item.src} alt={item.altText} />
+                          <img
+                            src={require(`assets/img/${image}`)}
+                            alt={`Project Image ${imageIndex + 1}`}
+                          />
                           <CarouselCaption
-                            captionText={item.caption}
+                            captionText=""
                             captionHeader=""
                           />
                         </CarouselItem>
-                      );
-                    })}
-                    <a
-                      className="left carousel-control carousel-control-prev"
-                      data-slide="prev"
-                      href="#pablo"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        previous();
-                      }}
-                      role="button"
+                      ))}
+                      <a
+                        className="left carousel-control carousel-control-prev"
+                        data-slide="prev"
+                        href="#pablo"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          previous();
+                        }}
+                        role="button"
+                      >
+                        <span className="fa fa-angle-left" />
+                        <span className="sr-only">Previous</span>
+                      </a>
+                      <a
+                        className="right carousel-control carousel-control-next"
+                        data-slide="next"
+                        href="#pablo"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          next();
+                        }}
+                        role="button"
+                      >
+                        <span className="fa fa-angle-right" />
+                        <span className="sr-only">Next</span>
+                      </a>
+                    </Carousel>
+                  </Card>
+                  <div className="text-center">
+                    <Button
+                      className="btn-outline-default btn-round mt-2 mr-5"
+                      color="default"
+                      size="lg"
+                      target="_blank"
+                      href={portfolioData.portfolioList[
+                        selectedProjectIndex
+                      ].github}
                     >
-                      <span className="fa fa-angle-left" />
-                      <span className="sr-only">Previous</span>
-                    </a>
-                    <a
-                      className="right carousel-control carousel-control-next"
-                      data-slide="next"
-                      href="#pablo"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        next();
-                      }}
-                      role="button"
+                      github
+                    </Button>
+                    <Button
+                      className="btn-outline-default btn-round mt-2"
+                      color="default"
+                      size="lg"
+                      target="_blank"
+                      href={portfolioData.portfolioList[
+                        selectedProjectIndex
+                      ].deploy}
                     >
-                      <span className="fa fa-angle-right" />
-                      <span className="sr-only">Next</span>
-                    </a>
-                  </Carousel>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+                      배포 링크
+                    </Button>
+                      
+                  </div>
+                  
+                </Col>
+                <Col className="ml-auto mr-auto" md="6">
+                  {/* 수정: 선택된 프로젝트의 제목을 표시 */}
+                  <div>
+                    <h2 style={{ fontWeight: "normal"}}>
+                      {portfolioData.portfolioList[
+                        selectedProjectIndex
+                      ].name}{'   '}
+                      <small>
+                        {portfolioData.portfolioList[
+                          selectedProjectIndex
+                        ].project}
+                      </small><br/>
+                      <small>
+                        {portfolioData.portfolioList[
+                          selectedProjectIndex
+                        ].period}
+                      </small>
+                    </h2>
+                    <h5><br />
+                      {portfolioData.portfolioList[
+                        selectedProjectIndex
+                      ].descriptionDetail.split('\n').map((
+                        line, index) => (
+                        <React.Fragment key={index}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
+                    </h5>
+
+                  </div>
+
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        )}
       </div>{" "}
     </>
   );
