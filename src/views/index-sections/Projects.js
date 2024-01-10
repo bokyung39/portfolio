@@ -32,7 +32,7 @@ import {
 } from "reactstrap";
 
 // core components
-
+import portfolioData from "../../assets/data/portfolioData";
 const items = [
   {
     src: require("assets/img/soroush-karimi.jpg"),
@@ -74,155 +74,132 @@ function Projects() {
     if (animating) return;
     setActiveIndex(newIndex);
   };
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth"});
+    }
+  };
   return (
     <>
-    <div className="section section-dark">
+    <div className="section section-dark" id="projects">
         <Container>
         <div className="title">
           <h2>PROJECTS</h2>
         </div>
           <Row className="example-page">
-            <Col className="text-center" md="6">
-              
-                <img
-                  alt="..."
-                  className="img-rounded img-responsive img-hover"
-                  src={require("assets/img/WhiteRabbit.png")}
-                  style={{ width: "100%" }}
-                />
-                <h4 className="hover-text">
-                  프로젝트 설명
-                </h4>
-              
-              
-              <div className="text-left">
-                <Button
-                  className="btn-outline-neutral btn-round ml-1 mr-1 mb-4"
-                  color="default"
-                  size="sm"
-                >
-                  express 
-                </Button>
-                <Button
-                  className="btn-outline-neutral btn-round ml-1 mr-1 mb-4"
-                  color="default"
-                  size="sm"
-                >
-                  Node.js 
-                </Button>
-                <Button
-                  className="btn-outline-neutral btn-round ml-1 mr-1 mb-4"
-                  color="default"
-                  size="sm"
-                >
-                  Moongoose 
-                </Button>
-              </div>
-              
-            </Col>
-            <Col className="text-center" md="6">
-              <a href="examples/landing.html" target="_blank">
-                <img
-                  alt="..."
-                  className="img-rounded img-responsive"
-                  src={require("assets/img/examples/landing-page.png")}
-                  style={{ width: "100%" }}
-                />
-              </a>
-              <Button
-                className="btn-outline-neutral btn-round"
-                color="default"
-                href="/landing-page"
-                target="_blank"
-              >
-                Landing 
-              </Button>
-            </Col>
-            <Col className="text-center" md="6">
-              <a href="examples/profile.html" target="_blank">
-                <img
-                  alt="..."
-                  className="img-rounded img-responsive"
-                  src={require("assets/img/examples/profile-page.png")}
-                  style={{ width: "100%" }}
-                />
-              </a>
-              <Button
-                className="btn-outline-neutral btn-round"
-                color="default"
-                href="/profile-page"
-                target="_blank"
-              >
-                Profile Page
-              </Button>
-            </Col>
+          {portfolioData.portfolioList.map((project, index) => (
+              <Col key={index} className="text-center" md="6">
+                <a className="img-hover">
+                  {/* Project Image */}
+                  <img
+                    alt={project.name}
+                    className="img-rounded img-responsive"
+                    src={require(`assets/img/${project.images[0]}`)}
+                    style={{ width: "100%" }}
+                  />
+                  <div className="hover-text">
+                    {/* Project Details */}
+                    <h5 style={{ fontWeight: "bold", margin: "10px 0" }}>
+                      {project.name}
+                    </h5>
+                    <p style={{ fontWeight: "normal" }}>
+                      {project.description}
+                    </p>
+                    <Button
+                      className="btn-outline-neutral btn-round mt-2"
+                      color="default"
+                      size="sm"
+                      onClick={() => scrollToSection("detail")}
+                    >
+                      자세히 보기
+                    </Button>
+                  </div>
+                </a>
+                {/* Additional Project Information */}
+                <div className="text-left">
+                  {project.techStack.map((tech, techIndex) => (
+                    <Button
+                      key={techIndex}
+                      className="btn-outline-neutral btn-round ml-1 mr-1 mb-4"
+                      color="default"
+                      size="sm"
+                    >
+                      {tech}
+                    </Button>
+                  ))}
+                </div>
+              </Col>
+            ))}
           </Row>
         </Container>
       </div>
-      <div className="section pt-o" id="carousel projects">
-        <Container className="projects">
-        <div className="title">
-          <h2>PROJECTS</h2>
-        </div>
-          <Row>
-            <Col className="ml-auto mr-auto" md="8">
-              <Card className="page-carousel">
-                <Carousel
-                  activeIndex={activeIndex}
-                  next={next}
-                  previous={previous}
-                >
-                  <CarouselIndicators
-                    items={items}
+      <div id="detail">
+        <div className="section pt-o" id="carousel projects">
+          <Container className="projects">
+          <div className="title">
+            <h2>detail</h2>
+          </div>
+            <Row>
+              <Col className="ml-auto mr-auto" md="8">
+                <Card className="page-carousel">
+                  <Carousel
                     activeIndex={activeIndex}
-                    onClickHandler={goToIndex}
-                  />
-                  {items.map((item) => {
-                    return (
-                      <CarouselItem
-                        onExiting={onExiting}
-                        onExited={onExited}
-                        key={item.src}
-                      >
-                        <img src={item.src} alt={item.altText} />
-                        <CarouselCaption
-                          captionText={item.caption}
-                          captionHeader=""
-                        />
-                      </CarouselItem>
-                    );
-                  })}
-                  <a
-                    className="left carousel-control carousel-control-prev"
-                    data-slide="prev"
-                    href="#pablo"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      previous();
-                    }}
-                    role="button"
+                    next={next}
+                    previous={previous}
                   >
-                    <span className="fa fa-angle-left" />
-                    <span className="sr-only">Previous</span>
-                  </a>
-                  <a
-                    className="right carousel-control carousel-control-next"
-                    data-slide="next"
-                    href="#pablo"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      next();
-                    }}
-                    role="button"
-                  >
-                    <span className="fa fa-angle-right" />
-                    <span className="sr-only">Next</span>
-                  </a>
-                </Carousel>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
+                    <CarouselIndicators
+                      items={items}
+                      activeIndex={activeIndex}
+                      onClickHandler={goToIndex}
+                    />
+                    {items.map((item) => {
+                      return (
+                        <CarouselItem
+                          onExiting={onExiting}
+                          onExited={onExited}
+                          key={item.src}
+                        >
+                          <img src={item.src} alt={item.altText} />
+                          <CarouselCaption
+                            captionText={item.caption}
+                            captionHeader=""
+                          />
+                        </CarouselItem>
+                      );
+                    })}
+                    <a
+                      className="left carousel-control carousel-control-prev"
+                      data-slide="prev"
+                      href="#pablo"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        previous();
+                      }}
+                      role="button"
+                    >
+                      <span className="fa fa-angle-left" />
+                      <span className="sr-only">Previous</span>
+                    </a>
+                    <a
+                      className="right carousel-control carousel-control-next"
+                      data-slide="next"
+                      href="#pablo"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        next();
+                      }}
+                      role="button"
+                    >
+                      <span className="fa fa-angle-right" />
+                      <span className="sr-only">Next</span>
+                    </a>
+                  </Carousel>
+                </Card>
+              </Col>
+            </Row>
+          </Container>
+        </div>
       </div>{" "}
     </>
   );
