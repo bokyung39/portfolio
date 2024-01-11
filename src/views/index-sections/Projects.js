@@ -20,7 +20,7 @@ import React from "react";
 
 // reactstrap components
 import {
-  Button, 
+  Button,
   Card,
   Container,
   Row,
@@ -33,23 +33,6 @@ import {
 
 // core components
 import portfolioData from "../../assets/data/portfolioData";
-const items = [
-  {
-    src: require("assets/img/soroush-karimi.jpg"),
-    altText: "Somewhere",
-    caption: "Somewhere",
-  },
-  {
-    src: require("assets/img/federico-beccari.jpg"),
-    altText: "Somewhere else",
-    caption: "Somewhere else",
-  },
-  {
-    src: require("assets/img/joshua-stannard.jpg"),
-    altText: "Here it is",
-    caption: "Here it is",
-  },
-];
 
 function Projects() {
   const [activeIndex, setActiveIndex] = React.useState(0);
@@ -63,12 +46,16 @@ function Projects() {
   };
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = activeIndex === portfolioData.portfolioList[
+      selectedProjectIndex
+    ].images.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? portfolioData.portfolioList[
+      selectedProjectIndex
+    ].images.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
   const goToIndex = (newIndex) => {
@@ -83,6 +70,7 @@ function Projects() {
   };
   const handleDetailClick = (index) => {
     setSelectedProjectIndex(index);
+    setActiveIndex(0); 
     scrollToSection("detail");
   };
   return (
@@ -100,7 +88,7 @@ function Projects() {
                   <img
                     alt={project.name}
                     className="img-rounded img-responsive"
-                    src={require(`assets/img/${project.images[0]}`)}
+                    src={require(`assets/img/${project.thumbnail}`)}
                     style={{ width: "100%" }}
                   />
                   <div className="hover-text">
@@ -139,22 +127,22 @@ function Projects() {
           </Row>
         </Container>
       </div>
-      <div id="detail">
+      <div className="section" id="detail">
         {selectedProjectIndex === null && setSelectedProjectIndex(0)}
         {selectedProjectIndex !== null && (
           <div className="section pt-o">
             <Container className="projects">
               
               <Row>
-                <Col className="ml-auto mr-auto" md="5">
+                <Col className="ml-auto mr-auto" md="4">
                   <Card className="page-carousel">
-                    {/* 수정: 선택된 프로젝트의 이미지를 Carousel로 표시 */}
+                    {/* 선택된 프로젝트의 이미지를 Carousel로 표시 */}
                     <Carousel
                       activeIndex={activeIndex}
                       next={next}
                       previous={previous}
                     >
-                      {/* 수정: 선택된 프로젝트의 이미지 목록을 반복해서 CarouselItem으로 생성 */}
+                      {/* 선택된 프로젝트의 이미지 목록을 반복해서 CarouselItem으로 생성 */}
                       {portfolioData.portfolioList[
                         selectedProjectIndex
                       ].images.map((image, imageIndex) => (
@@ -229,12 +217,12 @@ function Projects() {
                   
                 </Col>
                 <Col className="ml-auto mr-auto" md="6">
-                  {/* 수정: 선택된 프로젝트의 제목을 표시 */}
+                  {/* 선택된 프로젝트의 제목을 표시 */}
                   <div>
                     <h2 style={{ fontWeight: "normal"}}>
                       {portfolioData.portfolioList[
                         selectedProjectIndex
-                      ].name}{'   '}
+                      ].name}&nbsp;&nbsp;
                       <small>
                         {portfolioData.portfolioList[
                           selectedProjectIndex
