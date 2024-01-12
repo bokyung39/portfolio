@@ -60,16 +60,15 @@ function AboutMe() {
       <div className="section section-buttons" id="about-me">
         <Container>
           <div className="title">
-            <h2>ABOUT ME</h2>
+            <h2 style={{ fontWeight: "normal"}}>ABOUT ME</h2>
           </div>
           <div id="profile">
           <div className="title">
               <h3>
                   안녕하세요. 백엔드 개발자를 꿈꾸는 김보경입니다.<br/><br/>
                   문제에서 기회를 포착하고,
-                  해결을 통한 성취감을 좋아합니다.<br/>
-                  일상에서 마주한 불편함으로,
-                  더 나은 사용자 경험에 대해 고민합니다.
+                  해결을 통한 성취감을 좋아하며, 끊임없이 발전하고자 합니다.<br/>
+                  협업과 효율성을 중요시하며, 사용자들에게 편리한 경험을 제공하고자 노력합니다.
                   <br/>
                   <br/>
                   <br/>
@@ -82,7 +81,7 @@ function AboutMe() {
                 <img
                   alt="..."
                   className="img-circle img-no-padding img-responsive"
-                  src={require("assets/img/faces/profile_cat.jpg")}
+                  src={require("assets/img/faces/6.jpg")}
                 />
               </Col>
               <Col md="9">

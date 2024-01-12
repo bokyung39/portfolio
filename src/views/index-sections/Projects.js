@@ -78,7 +78,7 @@ function Projects() {
     <div className="section section-dark" id="projects">
         <Container>
         <div className="title">
-          <h2>PROJECTS</h2>
+          <h2 style={{ fontWeight: "normal"}}>PROJECTS</h2>
         </div>
           <Row className="example-page">
           {portfolioData.portfolioList.map((project, index) => (
@@ -234,14 +234,46 @@ function Projects() {
                         ].period}
                       </small>
                     </h2>
-                    <h5><br />
+                    <h5 style={{ fontWeight: "bold"}}><br />
+                     Summary
+                    </h5>
+                    <h5 style={{ fontWeight: "normal", fontSize: "medium"}}>
                       {portfolioData.portfolioList[
                         selectedProjectIndex
-                      ].descriptionDetail.split('\n').map((
+                      ].summary.split('\n').map((
                         line, index) => (
                         <React.Fragment key={index}>
                           {line}
                           <br />
+                        </React.Fragment>
+                      ))}
+                    </h5>
+                    <h5 style={{ fontWeight: "bold"}}><br />
+                     Meaning
+                    </h5>
+                    <h5 style={{ fontWeight: "normal", fontSize: "medium"}}>
+                      {portfolioData.portfolioList[
+                        selectedProjectIndex
+                      ].meaning.split('\n').map((
+                        line, index) => (
+                        <React.Fragment key={index}>
+                          {line}
+                          <br />
+                        </React.Fragment>
+                      ))}
+                    </h5>
+                    <h6 style={{ fontWeight: "bold", fontSize: "medium", textTransform: "none"}}><br />
+                     Technology Stack
+                    </h6>
+                    <h5 style={{ fontWeight: "normal", fontSize: "medium"}}>
+
+                      {portfolioData.portfolioList[
+                        selectedProjectIndex
+                      ].techStack.map((
+                        tech, techIndex) => (
+                        <React.Fragment key={techIndex}>
+                          {tech}&nbsp;&nbsp;
+                          
                         </React.Fragment>
                       ))}
                     </h5>

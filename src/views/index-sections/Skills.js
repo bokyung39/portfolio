@@ -53,7 +53,7 @@ function Skills() {
       <div className="section" id="skills">
         <Container className="skills">
         <div className="title">
-          <h2>SKILLS</h2>
+          <h2 style={{ fontWeight: "normal"}}>SKILLS</h2>
         </div>
           <Row>
             <Col md="6">
