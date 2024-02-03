@@ -51,6 +51,7 @@ function Index() {
       document.body.classList.remove("index");
     };
   });
+  const sectionButtonsRef = React.useRef(null);
   return (
     <>
       <IndexNavbar />
@@ -60,9 +61,9 @@ function Index() {
         <Skills />
         <Projects />
         <SectionButtons />
-        <SectionNavbars />
-        <SectionNavigation />
-        <SectionProgress />
+        {/* <SectionNavbars /> */}
+        {/* <SectionNavigation /> */}
+        {/* <SectionProgress />
         <SectionNotifications />
         <SectionTypography />
         <SectionJavaScript />
@@ -71,7 +72,7 @@ function Index() {
         <SectionDark />
         <SectionLogin />
         <SectionExamples />
-        <SectionDownload />
+        <SectionDownload /> */}
         <DemoFooter />
       </div>
     </>
