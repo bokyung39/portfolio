@@ -35,7 +35,7 @@ import {
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
-const [scrollOffset, setScrollOffset] = useState(0);
+  const [scrollOffset, setScrollOffset] = useState(0);
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
     document.documentElement.classList.toggle("nav-open");
@@ -44,7 +44,7 @@ const [scrollOffset, setScrollOffset] = useState(0);
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth"});
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -73,10 +73,7 @@ const [scrollOffset, setScrollOffset] = useState(0);
     <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand
-            data-placement="bottom"
-            href="/"
-          >
+          <NavbarBrand data-placement="bottom" href="/portfolio">
             Kim Bo Kyung
           </NavbarBrand>
           <button
@@ -97,37 +94,37 @@ const [scrollOffset, setScrollOffset] = useState(0);
           isOpen={navbarCollapse}
         >
           <Nav navbar>
-          <NavItem>
+            <NavItem>
               <NavLink
                 data-placement="bottom"
                 href="#"
-              onClick={() => scrollToSection("about-me")}
-              title="about-me"
+                onClick={() => scrollToSection("about-me")}
+                title="about-me"
               >
                 about me
               </NavLink>
             </NavItem>
             <NavItem>
-            <NavLink
-              data-placement="bottom"
-              href="#"
-              onClick={() => scrollToSection("skills")}
-              title="skills"
-            >
-              skills
+              <NavLink
+                data-placement="bottom"
+                href="#"
+                onClick={() => scrollToSection("skills")}
+                title="skills"
+              >
+                skills
               </NavLink>
             </NavItem>
             <NavItem>
-            <NavLink
-              data-placement="bottom"
-              href="#"
-              onClick={() => scrollToSection("projects")}
-              title="projects"
-            >
-              projects
+              <NavLink
+                data-placement="bottom"
+                href="#"
+                onClick={() => scrollToSection("projects")}
+                title="projects"
+              >
+                projects
               </NavLink>
             </NavItem>
-            
+
             <NavItem>
               <NavLink
                 data-placement="bottom"
