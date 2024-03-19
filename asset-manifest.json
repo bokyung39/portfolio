@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.72e453e3.css",
-    "main.js": "/portfolio/static/js/main.37fd2e7d.js",
+    "main.css": "/portfolio/static/css/main.010b8403.css",
+    "main.js": "/portfolio/static/js/main.88d7b83d.js",
     "static/media/board.png": "/portfolio/static/media/board.87b2db77c6d37101d25a.png",
     "static/media/follow.png": "/portfolio/static/media/follow.8a8ae5da675a48199e28.png",
     "static/media/post.png": "/portfolio/static/media/post.0e7eb3e258a31c8944cb.png",
@@ -53,12 +53,12 @@
     "static/media/placeholder.jpg": "/portfolio/static/media/placeholder.670a22cabe7be7199490.jpg",
     "static/media/nucleo-icons.woff2": "/portfolio/static/media/nucleo-icons.ec16bc4cc4526801004d.woff2",
     "static/media/profile_cat.jpg": "/portfolio/static/media/profile_cat.ef2efa095cf1d4745ad4.jpg",
-    "static/media/nucleo-logo.svg": "/portfolio/static/media/nucleo-logo.3e948869d51a107a2290.svg",
+    "static/media/nucleo-logo.svg": "/portfolio/static/media/nucleo-logo.159d0494497d4ac97de2.svg",
     "static/media/favicon.ico": "/portfolio/static/media/favicon.2392ebd52afb569f1c42.ico",
     "index.html": "/portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.72e453e3.css",
-    "static/js/main.37fd2e7d.js"
+    "static/css/main.010b8403.css",
+    "static/js/main.88d7b83d.js"
   ]
 }
