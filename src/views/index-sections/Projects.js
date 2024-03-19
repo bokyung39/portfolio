@@ -1,24 +1,5 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.3.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
-// reactstrap components
 import {
   Button,
   Card,
@@ -31,7 +12,6 @@ import {
   CarouselCaption,
 } from "reactstrap";
 
-// core components
 import portfolioData from "../../assets/data/portfolioData";
 
 function Projects() {
@@ -46,16 +26,19 @@ function Projects() {
   };
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === portfolioData.portfolioList[
-      selectedProjectIndex
-    ].images.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex =
+      activeIndex ===
+      portfolioData.portfolioList[selectedProjectIndex].images.length - 1
+        ? 0
+        : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? portfolioData.portfolioList[
-      selectedProjectIndex
-    ].images.length - 1 : activeIndex - 1;
+    const nextIndex =
+      activeIndex === 0
+        ? portfolioData.portfolioList[selectedProjectIndex].images.length - 1
+        : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
   const goToIndex = (newIndex) => {
@@ -65,23 +48,23 @@ function Projects() {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth"});
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
   const handleDetailClick = (index) => {
     setSelectedProjectIndex(index);
-    setActiveIndex(0); 
+    setActiveIndex(0);
     scrollToSection("detail");
   };
   return (
     <>
-    <div className="section section-dark" id="projects">
+      <div className="section section-dark" id="projects">
         <Container>
-        <div className="title">
-          <h2 style={{ fontWeight: "normal"}}>PROJECTS</h2>
-        </div>
+          <div className="title">
+            <h2 style={{ fontWeight: "normal" }}>PROJECTS</h2>
+          </div>
           <Row className="example-page">
-          {portfolioData.portfolioList.map((project, index) => (
+            {portfolioData.portfolioList.map((project, index) => (
               <Col key={index} className="text-center" md="6">
                 <a className="img-hover">
                   {/* Project Image */}
@@ -132,7 +115,6 @@ function Projects() {
         {selectedProjectIndex !== null && (
           <div className="section pt-o">
             <Container className="projects">
-              
               <Row>
                 <Col className="ml-auto mr-auto" md="4">
                   <Card className="page-carousel">
@@ -155,10 +137,7 @@ function Projects() {
                             src={require(`assets/img/${image}`)}
                             alt={`Project Image ${imageIndex + 1}`}
                           />
-                          <CarouselCaption
-                            captionText=""
-                            captionHeader=""
-                          />
+                          <CarouselCaption captionText="" captionHeader="" />
                         </CarouselItem>
                       ))}
                       <a
@@ -191,17 +170,17 @@ function Projects() {
                   </Card>
                   <div className="text-center">
                     <Button
-                      className="btn-outline-default btn-round mt-2 mr-5"
+                      className="btn-outline-default btn-round mt-2"
                       color="default"
                       size="lg"
                       target="_blank"
-                      href={portfolioData.portfolioList[
-                        selectedProjectIndex
-                      ].github}
+                      href={
+                        portfolioData.portfolioList[selectedProjectIndex].github
+                      }
                     >
                       github
                     </Button>
-                    <Button
+                    {/* <Button
                       className="btn-outline-default btn-round mt-2"
                       color="default"
                       size="lg"
@@ -211,75 +190,84 @@ function Projects() {
                       ].deploy}
                     >
                       배포 링크
-                    </Button>
-                      
+                    </Button> */}
                   </div>
-                  
                 </Col>
                 <Col className="ml-auto mr-auto" md="6">
                   {/* 선택된 프로젝트의 제목을 표시 */}
                   <div>
-                    <h2 style={{ fontWeight: "normal"}}>
-                      {portfolioData.portfolioList[
-                        selectedProjectIndex
-                      ].name}&nbsp;&nbsp;
+                    <h2 style={{ fontWeight: "normal" }}>
+                      {portfolioData.portfolioList[selectedProjectIndex].name}
+                      &nbsp;&nbsp;
                       <small>
-                        {portfolioData.portfolioList[
-                          selectedProjectIndex
-                        ].project}
-                      </small><br/>
+                        {
+                          portfolioData.portfolioList[selectedProjectIndex]
+                            .project
+                        }
+                      </small>
+                      <br />
                       <small>
-                        {portfolioData.portfolioList[
-                          selectedProjectIndex
-                        ].period}
+                        {
+                          portfolioData.portfolioList[selectedProjectIndex]
+                            .period
+                        }
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <span style={{ fontSize: "smaller" }}>
+                          {
+                            portfolioData.portfolioList[selectedProjectIndex]
+                              .role
+                          }
+                        </span>
                       </small>
                     </h2>
-                    <h5 style={{ fontWeight: "bold"}}><br />
-                     Summary
+                    <h5 style={{ fontWeight: "bold" }}>
+                      <br />
+                      Summary
                     </h5>
-                    <h5 style={{ fontWeight: "normal", fontSize: "medium"}}>
-                      {portfolioData.portfolioList[
-                        selectedProjectIndex
-                      ].summary.split('\n').map((
-                        line, index) => (
-                        <React.Fragment key={index}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      ))}
+                    <h5 style={{ fontWeight: "normal", fontSize: "medium" }}>
+                      {portfolioData.portfolioList[selectedProjectIndex].summary
+                        .split("\n")
+                        .map((line, index) => (
+                          <React.Fragment key={index}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        ))}
                     </h5>
-                    <h5 style={{ fontWeight: "bold"}}><br />
-                     Meaning
+                    <h5 style={{ fontWeight: "bold" }}>
+                      <br />
+                      Meaning
                     </h5>
-                    <h5 style={{ fontWeight: "normal", fontSize: "medium"}}>
-                      {portfolioData.portfolioList[
-                        selectedProjectIndex
-                      ].meaning.split('\n').map((
-                        line, index) => (
-                        <React.Fragment key={index}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      ))}
+                    <h5 style={{ fontWeight: "normal", fontSize: "medium" }}>
+                      {portfolioData.portfolioList[selectedProjectIndex].meaning
+                        .split("\n")
+                        .map((line, index) => (
+                          <React.Fragment key={index}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        ))}
                     </h5>
-                    <h6 style={{ fontWeight: "bold", fontSize: "medium", textTransform: "none"}}><br />
-                     Technology Stack
+                    <h6
+                      style={{
+                        fontWeight: "bold",
+                        fontSize: "medium",
+                        textTransform: "none",
+                      }}
+                    >
+                      <br />
+                      Technology Stack
                     </h6>
-                    <h5 style={{ fontWeight: "normal", fontSize: "medium"}}>
-
+                    <h5 style={{ fontWeight: "normal", fontSize: "medium" }}>
                       {portfolioData.portfolioList[
                         selectedProjectIndex
-                      ].techStack.map((
-                        tech, techIndex) => (
+                      ].techStack.map((tech, techIndex) => (
                         <React.Fragment key={techIndex}>
                           {tech}&nbsp;&nbsp;
-                          
                         </React.Fragment>
                       ))}
                     </h5>
-
                   </div>
-
                 </Col>
               </Row>
             </Container>
