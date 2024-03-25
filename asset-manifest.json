@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.010b8403.css",
-    "main.js": "/portfolio/static/js/main.89add252.js",
+    "main.js": "/portfolio/static/js/main.6cfba199.js",
+    "static/media/thumbnail.png": "/portfolio/static/media/thumbnail.50a6098ae32d7974917c.png",
     "static/media/board.png": "/portfolio/static/media/board.87b2db77c6d37101d25a.png",
     "static/media/follow.png": "/portfolio/static/media/follow.8a8ae5da675a48199e28.png",
     "static/media/post.png": "/portfolio/static/media/post.0e7eb3e258a31c8944cb.png",
@@ -31,19 +32,10 @@
     "static/media/bruno-abatti.jpg": "/portfolio/static/media/bruno-abatti.ac5426e506a4892af54d.jpg",
     "static/media/daniel-olahh.jpg": "/portfolio/static/media/daniel-olahh.77c0ffac60f9218de675.jpg",
     "static/media/rainbow-2412987_1920.jpg": "/portfolio/static/media/rainbow-2412987_1920.258ea7814430254bd728.jpg",
-    "static/media/profile-page.png": "/portfolio/static/media/profile-page.3a626caf205d1143f192.png",
     "static/media/blurred-image-1.jpg": "/portfolio/static/media/blurred-image-1.98c0e5e19751c2476706.jpg",
     "static/media/eva.jpg": "/portfolio/static/media/eva.258d5c64c8708a5ce23b.jpg",
-    "static/media/landing-page.png": "/portfolio/static/media/landing-page.80158096b63fb4a837e1.png",
     "static/media/WhiteRabbit.png": "/portfolio/static/media/WhiteRabbit.50a6098ae32d7974917c.png",
-    "static/media/thumbnail.png": "/portfolio/static/media/thumbnail.50a6098ae32d7974917c.png",
     "static/media/ryan.jpg": "/portfolio/static/media/ryan.ca24473bc1e6d20bf0d1.jpg",
-    "static/media/clem-onojeghuo-2.jpg": "/portfolio/static/media/clem-onojeghuo-2.d16702ce00aa38f275c0.jpg",
-    "static/media/ayo-ogunseinde-2.jpg": "/portfolio/static/media/ayo-ogunseinde-2.f4af8f2c98f6968c5ae9.jpg",
-    "static/media/joe-gardner-2.jpg": "/portfolio/static/media/joe-gardner-2.09841708956117e93a7b.jpg",
-    "static/media/clem-onojeghuo-3.jpg": "/portfolio/static/media/clem-onojeghuo-3.83003f446b7372176b72.jpg",
-    "static/media/kaci-baum-2.jpg": "/portfolio/static/media/kaci-baum-2.9b929eea6c1ef2b4dbb4.jpg",
-    "static/media/erik-lucatero-2.jpg": "/portfolio/static/media/erik-lucatero-2.d09715abe0463c58d6be.jpg",
     "static/media/avatar.jpg": "/portfolio/static/media/avatar.21d108f80102dc685d9b.jpg",
     "static/media/nucleo-icons.eot": "/portfolio/static/media/nucleo-icons.bd42d77b9672555647d1.eot",
     "static/media/nucleo-icons.ttf": "/portfolio/static/media/nucleo-icons.4466aeec3386b965a232.ttf",
@@ -52,13 +44,14 @@
     "static/media/nucleo-icons.woff": "/portfolio/static/media/nucleo-icons.8e954b749f951b654fc6.woff",
     "static/media/placeholder.jpg": "/portfolio/static/media/placeholder.670a22cabe7be7199490.jpg",
     "static/media/nucleo-icons.woff2": "/portfolio/static/media/nucleo-icons.ec16bc4cc4526801004d.woff2",
+    "static/media/favicon.ico": "/portfolio/static/media/favicon.6a8c1a7e5f7543fb5825.ico",
+    "static/media/android-chrome-512x512.png": "/portfolio/static/media/android-chrome-512x512.73fde580aaa134776480.png",
     "static/media/profile_cat.jpg": "/portfolio/static/media/profile_cat.ef2efa095cf1d4745ad4.jpg",
     "static/media/nucleo-logo.svg": "/portfolio/static/media/nucleo-logo.159d0494497d4ac97de2.svg",
-    "static/media/favicon.ico": "/portfolio/static/media/favicon.2392ebd52afb569f1c42.ico",
     "index.html": "/portfolio/index.html"
   },
   "entrypoints": [
     "static/css/main.010b8403.css",
-    "static/js/main.89add252.js"
+    "static/js/main.6cfba199.js"
   ]
 }
