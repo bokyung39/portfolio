@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.010b8403.css",
-    "main.js": "/portfolio/static/js/main.6cfba199.js",
+    "main.js": "/portfolio/static/js/main.fb2b0177.js",
     "static/media/thumbnail.png": "/portfolio/static/media/thumbnail.50a6098ae32d7974917c.png",
     "static/media/board.png": "/portfolio/static/media/board.87b2db77c6d37101d25a.png",
     "static/media/follow.png": "/portfolio/static/media/follow.8a8ae5da675a48199e28.png",
@@ -20,11 +20,16 @@
     "static/media/4.jpg": "/portfolio/static/media/4.48147bf3eb908165b9c7.jpg",
     "static/media/ilya-yakover.jpg": "/portfolio/static/media/ilya-yakover.751c23c0dc4ff39577cf.jpg",
     "static/media/federico-beccari.jpg": "/portfolio/static/media/federico-beccari.ab3a31e7758f490adca7.jpg",
+    "static/media/records.jpeg": "/portfolio/static/media/records.d83f7b89fc90de3753bf.jpeg",
     "static/media/2.jpg": "/portfolio/static/media/2.0159069a8e5f28e3d821.jpg",
     "static/media/daniel-olahs.jpg": "/portfolio/static/media/daniel-olahs.fe7b9cc0682304983705.jpg",
+    "static/media/main.jpeg": "/portfolio/static/media/main.f5052bab846d10c7b5e6.jpeg",
     "static/media/login.jpg": "/portfolio/static/media/login.ab931d77bfe905914456.jpg",
     "static/media/fabio-mangione.jpg": "/portfolio/static/media/fabio-mangione.488bc249dffdae3556c6.jpg",
     "static/media/1.jpg": "/portfolio/static/media/1.19cf782e67db14b3b644.jpg",
+    "static/media/landing.jpeg": "/portfolio/static/media/landing.e205badc148e9460db8f.jpeg",
+    "static/media/monitoring.jpeg": "/portfolio/static/media/monitoring.23e67e3e360ab6e5b24a.jpeg",
+    "static/media/signup.jpeg": "/portfolio/static/media/signup.b43e0880163f11dcf6b9.jpeg",
     "static/media/uriel-soberanes.jpg": "/portfolio/static/media/uriel-soberanes.b741f54e9ccbd071a751.jpg",
     "static/media/5.jpg": "/portfolio/static/media/5.91850190e58410bce346.jpg",
     "static/media/6.jpg": "/portfolio/static/media/6.6921ada6dc72368122e1.jpg",
@@ -52,6 +57,6 @@
   },
   "entrypoints": [
     "static/css/main.010b8403.css",
-    "static/js/main.6cfba199.js"
+    "static/js/main.fb2b0177.js"
   ]
 }
