@@ -6,6 +6,7 @@ import "react-circular-progressbar/dist/styles.css";
 import { CircularProgressbarWithChildren } from "react-circular-progressbar";
 import { FaNodeJs, FaPython, FaReact } from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
+import { SiTypescript, SiNestjs } from "react-icons/si";
 function Skills() {
   const [activeTab, setActiveTab] = React.useState("1");
   const toggle = (tab) => {
@@ -246,6 +247,106 @@ function Skills() {
                     <p className="description" style={{ marginTop: 10 }}>
                       컴포넌트 기반 아키텍처에 대한 이해를 바탕으로 간단한
                       리액트 애플리케이션을 개발할 수 있습니다.
+                    </p>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col md="3">
+                {/* <div className="title">
+                  <h3 style={{ opacity: 0 }}> .</h3>
+                </div> */}
+                <div className="info">
+                  <div className="icon icon-info">
+                    <CircularProgressbarWithChildren
+                      value={60}
+                      circleRatio={0.5}
+                      strokeWidth={5}
+                      styles={{
+                        position: "static",
+                        root: { width: "3.15em" },
+                        path: {
+                          stroke: "#51bcda",
+                          transition: "stroke-dashoffset 0.5s ease 0s",
+                          transform: "rotate(-0.25turn)",
+                          transformOrigin: "center center",
+                        },
+                        trail: {
+                          stroke: "#d6d6d6",
+                          transform: "rotate(-0.25turn)",
+                          transformOrigin: "center center",
+                        },
+                        text: {
+                          fill: "#f88",
+                          fontSize: "16px",
+                        },
+                        background: { fill: "#3e98c7" },
+                      }}
+                    >
+                      {" "}
+                    </CircularProgressbarWithChildren>
+                    <div style={{ fontSize: 12, marginTop: 20 }}>
+                      <strong>60%</strong>
+                    </div>
+                    <SiTypescript style={{ marginTop: -20 }} />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title" style={{ marginTop: 20 }}>
+                      TypeScript
+                    </h4>
+                    <p className="description" style={{ marginTop: 10 }}>
+                      인턴 과정을 통해 타입스크립트를 활용한 프로젝트를
+                      진행하고, API의 성능을 높이는데에 기여한 경험이 있습니다.
+                    </p>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                {/* <div className="title">
+                  <h3 style={{ opacity: 0 }}> .</h3>
+                </div> */}
+                <div className="info">
+                  <div className="icon icon-info">
+                    <CircularProgressbarWithChildren
+                      value={50}
+                      circleRatio={0.5}
+                      strokeWidth={5}
+                      styles={{
+                        position: "static",
+                        root: { width: "3.15em" },
+                        path: {
+                          stroke: "#51bcda",
+                          transition: "stroke-dashoffset 0.5s ease 0s",
+                          transform: "rotate(-0.25turn)",
+                          transformOrigin: "center center",
+                        },
+                        trail: {
+                          stroke: "#d6d6d6",
+                          transform: "rotate(-0.25turn)",
+                          transformOrigin: "center center",
+                        },
+                        text: {
+                          fill: "#f88",
+                          fontSize: "16px",
+                        },
+                        background: { fill: "#3e98c7" },
+                      }}
+                    >
+                      {" "}
+                    </CircularProgressbarWithChildren>
+                    <div style={{ fontSize: 12, marginTop: 20 }}>
+                      <strong>50%</strong>
+                    </div>
+                    <SiNestjs style={{ marginTop: -20 }} />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title" style={{ marginTop: 20 }}>
+                      Nest.js
+                    </h4>
+                    <p className="description" style={{ marginTop: 10 }}>
+                      Nest.js에 대해 학습하면서, 동시에 이를 활용한
+                      개인프로젝트와 팀프로젝트를 진행하고 있습니다.
                     </p>
                   </div>
                 </div>
