@@ -49,10 +49,10 @@ const portfolioData = {
     },
     {
       name: "시워언해 (진행중)",
-      period: "2023.03 ~",
+      period: "2024.11 ~",
       project: "Web Application",
       role: "풀스텍 담당",
-      techStack: ["React", "Express", "Node.js", "MongoDB"],
+      techStack: ["React", "TypeScript", "Nest.js", "PostgreSQL", "Docker"],
       description:
         "서울의 모든 찜질방 정보들을 한 눈에 쉽게 비교하고 예약할 수 있는 서비스입니다.",
       summary:
@@ -60,7 +60,7 @@ const portfolioData = {
       meaning: "",
       thumbnail: "shiwonhae/thumbnail.png",
       images: ["shiwonhae/thumbnail.png"],
-      github: "https://github.com/JEONGSUJONG/teamproject-shiwonhae",
+      github: "https://github.com/bokyung39/shiwonhae",
     },
   ],
 };
