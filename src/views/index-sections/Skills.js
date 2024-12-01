@@ -346,7 +346,7 @@ function Skills() {
                     </h4>
                     <p className="description" style={{ marginTop: 10 }}>
                       Nest.js에 대해 학습하면서, 동시에 이를 활용한
-                      개인프로젝트와 팀프로젝트를 진행하고 있습니다.
+                      개인프로젝트와 팀프로젝트를 진행중에 있습니다.
                     </p>
                   </div>
                 </div>
