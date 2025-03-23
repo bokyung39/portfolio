@@ -28,7 +28,7 @@ const portfolioData = {
     {
       name: "일비",
       period: "2022.02 - 2022.09",
-      project: "",
+      project: "Team Project",
       role: "낙상 감지 기기 담당",
       techStack: ["Pyhton"],
       description:
@@ -48,9 +48,28 @@ const portfolioData = {
       github: "https://github.com/bokyung39/ilbi",
     },
     {
+      name: "Nexus (진행중)",
+      period: "2024.11 ~",
+      project: "Team Project",
+      role: "풀스텍 담당",
+      techStack: ["Next.js", "TypeScript", "Nest.js", "PostgreSQL", "Docker"],
+      description: "팀원들간의 효율적인 프로젝트 관리를 위한 협업 도구입니다.",
+      summary: "팀원들간의 효율적인 프로젝트 관리를 위한 협업 도구입니다.",
+      meaning: "",
+      thumbnail: "nexus/thumbnail.png",
+      images: [
+        "nexus/signup-login.png",
+        "nexus/003.png",
+        "nexus/004.png",
+        "nexus/005.png",
+        "nexus/006.png",
+      ],
+      github: "https://github.com/bokyung39/Nexus",
+    },
+    {
       name: "시워언해 (진행중)",
       period: "2024.11 ~",
-      project: "Web Application",
+      project: "개인 Project",
       role: "풀스텍 담당",
       techStack: ["React", "TypeScript", "Nest.js", "PostgreSQL", "Docker"],
       description:

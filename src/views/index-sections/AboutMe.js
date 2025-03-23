@@ -1,4 +1,3 @@
-import React from "react";
 import { FaUser, FaPhone, FaEnvelope, FaBirthdayCake } from "react-icons/fa";
 
 import { Container, Row, Col } from "reactstrap";
@@ -14,7 +13,7 @@ function AboutMe() {
           <div id="profile">
             <div className="title" style={{ color: "#66615b" }}>
               <h3>
-                안녕하세요. 백엔드 개발자를 꿈꾸는 김보경입니다.
+                안녕하세요. 개발자를 꿈꾸는 김보경입니다.
                 <br />
                 <br />
                 문제에서 기회를 포착하고, 해결을 통한 성취감을 좋아하며,
