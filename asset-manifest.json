@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.010b8403.css",
-    "main.js": "/portfolio/static/js/main.ff305f0b.js",
+    "main.js": "/portfolio/static/js/main.e106c0bb.js",
     "static/media/thumbnail.png": "/portfolio/static/media/thumbnail.50a6098ae32d7974917c.png",
     "static/media/board.png": "/portfolio/static/media/board.87b2db77c6d37101d25a.png",
     "static/media/follow.png": "/portfolio/static/media/follow.8a8ae5da675a48199e28.png",
@@ -10,14 +10,19 @@
     "static/media/signup.png": "/portfolio/static/media/signup.0858bded768d7a6931fd.png",
     "static/media/mypage.png": "/portfolio/static/media/mypage.bc4dc2df0c1a41b66f44.png",
     "static/media/admin.png": "/portfolio/static/media/admin.d30df77ddb3c1ea53559.png",
+    "static/media/006.png": "/portfolio/static/media/006.c3d32d875eb95daee289.png",
+    "static/media/003.png": "/portfolio/static/media/003.f0abe453c2f32c43a83b.png",
+    "static/media/005.png": "/portfolio/static/media/005.a057896dd746ebc359ba.png",
     "static/media/clouds.png": "/portfolio/static/media/clouds.3c700c1313cc1cd3d3c5.png",
     "static/media/header.jpg": "/portfolio/static/media/header.9ee5a121426ba4b078bd.jpg",
+    "static/media/004.png": "/portfolio/static/media/004.68f945ea08c7e63bbeda.png",
     "static/media/antoine-barres.jpg": "/portfolio/static/media/antoine-barres.bc3299c239c25e5bf937.jpg",
     "static/media/login-image.jpg": "/portfolio/static/media/login-image.21e8ba3f9dca3c346851.jpg",
     "static/media/joshua-stannard.jpg": "/portfolio/static/media/joshua-stannard.a16f281cc99a02795dd7.jpg",
     "static/media/soroush-karimi.jpg": "/portfolio/static/media/soroush-karimi.620dc9e92af6bac885fe.jpg",
     "static/media/3.jpg": "/portfolio/static/media/3.ae7d8d7923707e2a9048.jpg",
     "static/media/4.jpg": "/portfolio/static/media/4.48147bf3eb908165b9c7.jpg",
+    "static/media/signup-login.png": "/portfolio/static/media/signup-login.1023415421676123e534.png",
     "static/media/ilya-yakover.jpg": "/portfolio/static/media/ilya-yakover.751c23c0dc4ff39577cf.jpg",
     "static/media/federico-beccari.jpg": "/portfolio/static/media/federico-beccari.ab3a31e7758f490adca7.jpg",
     "static/media/records.jpeg": "/portfolio/static/media/records.d83f7b89fc90de3753bf.jpeg",
@@ -57,6 +62,6 @@
   },
   "entrypoints": [
     "static/css/main.010b8403.css",
-    "static/js/main.ff305f0b.js"
+    "static/js/main.e106c0bb.js"
   ]
 }
