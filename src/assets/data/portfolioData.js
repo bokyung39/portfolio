@@ -49,13 +49,15 @@ const portfolioData = {
     },
     {
       name: "Nexus (진행중)",
-      period: "2024.11 ~",
+      period: "2025.01 ~",
       project: "Team Project",
       role: "풀스텍 담당",
       techStack: ["Next.js", "TypeScript", "Nest.js", "PostgreSQL", "Docker"],
       description: "팀원들간의 효율적인 프로젝트 관리를 위한 협업 도구입니다.",
-      summary: "팀원들간의 효율적인 프로젝트 관리를 위한 협업 도구입니다.",
-      meaning: "",
+      summary:
+        "팀원들간의 효율적인 프로젝트 관리를 위한 협업 도구입니다.\n실시간 채팅, 커뮤니티 및 프로젝트 진행 상태를 시각화하고, 협업 도구의 기능을 통합하여 프로젝트 관리에 대한 효율성을 높일 수 있는 플랫폼을 기획, 개발하였습니다.",
+      meaning:
+        "2명의 인원으로 프로젝트를 기획하고 프론트와 백엔드 개발, 배포까지 풀스택으로 진행한 프로젝트입니다.\n\n Next.js를 사용하여 프론트엔드 개발을 진행하면서 SSR의 장점을 경험했습니다. 또한 Docker를 이용한 컨테이너화로 개발 환경을 일관되게 유지하며 AWS EC2와 GitHub Actions을 통해 CI/CD 파이프라인을 구축하여 배포 자동화의 이점을 경험하였습니다.",
       thumbnail: "nexus/thumbnail.png",
       images: [
         "nexus/signup-login.png",
