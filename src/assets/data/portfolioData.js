@@ -48,7 +48,7 @@ const portfolioData = {
       github: "https://github.com/bokyung39/ilbi",
     },
     {
-      name: "Nexus (진행중)",
+      name: "Nexus",
       period: "2024.12 - 2025.04",
       project: "Team Project",
       role: "풀스텍 담당",
