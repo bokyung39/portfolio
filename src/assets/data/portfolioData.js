@@ -49,10 +49,17 @@ const portfolioData = {
     },
     {
       name: "Nexus (진행중)",
-      period: "2025.01 ~",
+      period: "2024.12 - 2025.04",
       project: "Team Project",
       role: "풀스텍 담당",
-      techStack: ["Next.js", "TypeScript", "Nest.js", "PostgreSQL", "Docker"],
+      techStack: [
+        "Next.js",
+        "TypeScript",
+        "Nest.js",
+        "PostgreSQL",
+        "Docker",
+        "AWS",
+      ],
       description: "팀원들간의 효율적인 프로젝트 관리를 위한 협업 도구입니다.",
       summary:
         "팀원들간의 효율적인 프로젝트 관리를 위한 협업 도구입니다.\n실시간 채팅, 커뮤니티 및 프로젝트 진행 상태를 시각화하고, 협업 도구의 기능을 통합하여 프로젝트 관리에 대한 효율성을 높일 수 있는 플랫폼을 기획, 개발하였습니다.",
